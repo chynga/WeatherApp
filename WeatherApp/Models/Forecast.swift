@@ -1506,7 +1506,8 @@ struct Forecast: Codable {
 }
 
 // MARK: - Daily
-struct Daily: Codable {
+struct Daily: Codable, Identifiable {
+    let id = UUID().uuidString
     let dt, sunrise, sunset, moonrise: Int?
     let moonset: Int?
     let moonPhase: Double?
@@ -1586,8 +1587,9 @@ struct Weather: Codable {
 //}
 
 // MARK: - Hourly
-struct Hourly: Codable {
-    let dt: Int?
+struct Hourly: Codable, Identifiable {
+    let id = UUID().uuidString
+    let dt: Int
     let temp, feelsLike: Double
     let pressure, humidity: Int?
     let dewPoint, uvi: Double?

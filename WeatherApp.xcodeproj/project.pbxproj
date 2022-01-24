@@ -20,6 +20,7 @@
 		EE242A122794FE5C00D1CF08 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE242A112794FE5C00D1CF08 /* HomeView.swift */; };
 		EE242A142794FE6B00D1CF08 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE242A132794FE6B00D1CF08 /* HomeVM.swift */; };
 		EE242A162794FF2D00D1CF08 /* ForecastDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE242A152794FF2D00D1CF08 /* ForecastDataService.swift */; };
+		EE8E2080279C30E700C4A066 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8E207F279C30E700C4A066 /* Int.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		EE242A112794FE5C00D1CF08 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EE242A132794FE6B00D1CF08 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		EE242A152794FF2D00D1CF08 /* ForecastDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDataService.swift; sourceTree = "<group>"; };
+		EE8E207F279C30E700C4A066 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				EE098D5D2796ED860020DF27 /* Double.swift */,
 				EE098D5F2796ED860020DF27 /* Color.swift */,
+				EE8E207F279C30E700C4A066 /* Int.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				EE2429EA2794F1F200D1CF08 /* WeatherAppApp.swift in Sources */,
 				EE242A162794FF2D00D1CF08 /* ForecastDataService.swift in Sources */,
 				EE242A142794FE6B00D1CF08 /* HomeVM.swift in Sources */,
+				EE8E2080279C30E700C4A066 /* Int.swift in Sources */,
 				EE2429FC2794F21400D1CF08 /* HapticManager.swift in Sources */,
 				EE242A122794FE5C00D1CF08 /* HomeView.swift in Sources */,
 				EE2429FD2794F21400D1CF08 /* NetworkingManager.swift in Sources */,
@@ -376,6 +380,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,6 +409,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

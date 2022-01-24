@@ -16,8 +16,8 @@ extension Double {
         //formatter.locale = .current // <- default value
         //formatter.currencyCode = "usd" // <- change currency
         //formatter.currencySymbol = "$" // <- change currency symbol
-        formatter.minimumFractionDigits = 2
-        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 1
+        formatter.maximumFractionDigits = 1
         return formatter
     }
     
@@ -25,7 +25,7 @@ extension Double {
         return self - 273.15
     }
     
-    func asTempWith2Decimals() -> String {
+    func asTemp() -> String {
         let number = NSNumber(value: self)
 //        return degreeFormatter.string(from: number) + "˚" ?? "-"
         if let degree = degreeFormatter.string(from: number) {

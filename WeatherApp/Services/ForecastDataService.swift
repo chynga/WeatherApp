@@ -14,11 +14,11 @@ class ForecastDataService {
     
     var forecastSubscription: AnyCancellable?
     
-    init(city: (name: String, lat: Double, lon: Double)) {
+    init(city: City) {
         getForecast(city: city)
     }
     
-    func getForecast(city: (name: String, lat: Double, lon: Double)) {
+    func getForecast(city: City) {
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(city.lat)&lon=\(city.lon)&exclude=current,minutely&appid=dd7bf386e7b6fa62abac93ec93b1f47a") else { return }
         print(url)
         forecastSubscription = NetworkingManager.download(url: url)
