@@ -20,56 +20,19 @@ struct HomeView: View {
         VStack(alignment: .center) {
             if let forecast = vm.forecast {
                 Text("\(vm.city.name)")
+                    .font(.largeTitle)
                 Text(forecast.hourly[0].temp.convertKelvinToCelsius().asTemp())
+                    .font(.system(size: 80))
+                    
             }
             
-            Button {
-                if vm.city == CityModel.almaty {
-                    vm.city = CityModel.nursultan
-                } else {
-                    vm.city = CityModel.almaty
-                }
-            } label: {
-                Text("Change")
-            }
-
-            List {
-                if
-                    let hourlyToday = vm.hourlyToday,
-                    let hourlyTomorrow = vm.hourlyTomorrow,
-                    let hourlyAfterTomorrow = vm.hourlyAfterTomorrow {
-                    
-                    Text("Today")
-                    
-                    ForEach(hourlyToday) { hourly in
-                        HStack {
-                            Text("\(hourly.dt.asLocalDate())")
-                            Spacer()
-                            Text("\(hourly.temp.convertKelvinToCelsius().asTemp())")
-                        }
-                    }
-                    
-                    Text("Tomorrow")
-                    
-                    ForEach(hourlyTomorrow) { hourly in
-                        HStack {
-                            Text("\(hourly.dt.asLocalDate())")
-                            Spacer()
-                            Text("\(hourly.temp.convertKelvinToCelsius().asTemp())")
-                        }
-                    }
-                    
-                    Text("After Tomorrow")
-                    
-                    ForEach(hourlyAfterTomorrow) { hourly in
-                        HStack {
-                            Text("\(hourly.dt.asLocalDate())")
-                            Spacer()
-                            Text("\(hourly.temp.convertKelvinToCelsius().asTemp())")
-                        }
-                    }
-                }
-            }
+            HourlyForcastView(dayTitle: "Today", hourlyForecast: vm.hourlyToday)
+                .padding()
+            
+            HourlyForcastView(dayTitle: "Tomorrow", hourlyForecast: vm.hourlyTomorrow)
+                .padding()
+            
+            Spacer()
         }
     }
 }

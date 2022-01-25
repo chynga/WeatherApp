@@ -21,6 +21,8 @@
 		EE242A142794FE6B00D1CF08 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE242A132794FE6B00D1CF08 /* HomeVM.swift */; };
 		EE242A162794FF2D00D1CF08 /* ForecastDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE242A152794FF2D00D1CF08 /* ForecastDataService.swift */; };
 		EE8E2080279C30E700C4A066 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8E207F279C30E700C4A066 /* Int.swift */; };
+		EE9C3E1C27A03A640086F7D1 /* HourlyForcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C3E1B27A03A640086F7D1 /* HourlyForcastView.swift */; };
+		EE9C3E1E27A03B410086F7D1 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9C3E1D27A03B410086F7D1 /* PreviewProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		EE242A132794FE6B00D1CF08 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		EE242A152794FF2D00D1CF08 /* ForecastDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDataService.swift; sourceTree = "<group>"; };
 		EE8E207F279C30E700C4A066 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		EE9C3E1B27A03A640086F7D1 /* HourlyForcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForcastView.swift; sourceTree = "<group>"; };
+		EE9C3E1D27A03B410086F7D1 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 				EE098D5D2796ED860020DF27 /* Double.swift */,
 				EE098D5F2796ED860020DF27 /* Color.swift */,
 				EE8E207F279C30E700C4A066 /* Int.swift */,
+				EE9C3E1D27A03B410086F7D1 /* PreviewProvider.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 		EE242A092794F60C00D1CF08 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EE9C3E1A27A03A350086F7D1 /* Components */,
 				EE242A0E2794FE2100D1CF08 /* Home */,
 			);
 			path = Core;
@@ -159,6 +165,14 @@
 				EE242A112794FE5C00D1CF08 /* HomeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EE9C3E1A27A03A350086F7D1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EE9C3E1B27A03A640086F7D1 /* HourlyForcastView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +250,10 @@
 				EE242A142794FE6B00D1CF08 /* HomeVM.swift in Sources */,
 				EE8E2080279C30E700C4A066 /* Int.swift in Sources */,
 				EE2429FC2794F21400D1CF08 /* HapticManager.swift in Sources */,
+				EE9C3E1E27A03B410086F7D1 /* PreviewProvider.swift in Sources */,
 				EE242A122794FE5C00D1CF08 /* HomeView.swift in Sources */,
 				EE2429FD2794F21400D1CF08 /* NetworkingManager.swift in Sources */,
+				EE9C3E1C27A03A640086F7D1 /* HourlyForcastView.swift in Sources */,
 				EE242A0D2794F66100D1CF08 /* Forecast.swift in Sources */,
 				EE1952232797D76E00BF5AEC /* City.swift in Sources */,
 				EE098D652796ED860020DF27 /* Color.swift in Sources */,
