@@ -25,7 +25,7 @@ struct HourlyForcastView: View {
                     HStack {
                         ForEach(hourlyForecast) { hourForecast in
                             VStack {
-                                Text(hourForecast.dt.asLocalDate())
+                                Text(hourForecast.dt.asLocalTime())
                                 
                                 Text(hourForecast.temp.convertKelvinToCelsius().asTemp())
                             }

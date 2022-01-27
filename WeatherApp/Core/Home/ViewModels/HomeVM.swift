@@ -13,6 +13,7 @@ class HomeVM: ObservableObject {
     @Published var hourlyToday: [Hourly]?
     @Published var hourlyTomorrow: [Hourly]?
     @Published var hourlyAfterTomorrow: [Hourly]?
+    @Published var daily: [Daily]?
     
     @Published var city: City
     private let forecastDataService: ForecastDataService
@@ -34,16 +35,19 @@ class HomeVM: ObservableObject {
         
         forecastDataService.$forecast
             .sink { [weak self] returnedForecast in
-                self?.forecast = returnedForecast
-                self?.hourlyToday = returnedForecast?.hourly.filter({ hourly in
+                guard let self = self else { return }
+                self.forecast = returnedForecast
+                self.daily = returnedForecast?.daily
+                
+                self.hourlyToday = returnedForecast?.hourly.filter({ hourly in
                     let date = Date(timeIntervalSince1970: Double(hourly.dt))
                     return Calendar.current.isDateInToday(date)
                 })
-                self?.hourlyTomorrow = returnedForecast?.hourly.filter({ hourly in
+                self.hourlyTomorrow = returnedForecast?.hourly.filter({ hourly in
                     let date = Date(timeIntervalSince1970: Double(hourly.dt))
                     return Calendar.current.isDateInTomorrow(date)
                 })
-                self?.hourlyAfterTomorrow = returnedForecast?.hourly.filter({ hourly in
+                self.hourlyAfterTomorrow = returnedForecast?.hourly.filter({ hourly in
                     let date = Date(timeIntervalSince1970: Double(hourly.dt))
                     let today = Date()
                     guard let nextDate = Calendar.current.date(byAdding: .day, value: 2, to: today) else { return false }

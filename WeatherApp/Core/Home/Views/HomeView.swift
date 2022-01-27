@@ -11,11 +11,6 @@ struct HomeView: View {
     
     @StateObject var vm = HomeVM(city: CityModel.almaty)
     
-    
-    init() {
-        
-    }
-    
     var body: some View {
         VStack(alignment: .center) {
             if let forecast = vm.forecast {
@@ -32,13 +27,35 @@ struct HomeView: View {
             HourlyForcastView(dayTitle: "Tomorrow", hourlyForecast: vm.hourlyTomorrow)
                 .padding()
             
+            DailyForecastView(dailyForecast: vm.daily)
+                .padding()
+            
             Spacer()
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                NavigationLink {
+                    Text("List of Cities")
+                } label: {
+                    Image(systemName: "mappin.and.ellipse")
+                }
+            }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink {
+                    Text("List of Cities")
+                } label: {
+                    Image(systemName: "gearshape.fill")
+                }
+            }
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        NavigationView {
+            HomeView()
+        }
     }
 }
